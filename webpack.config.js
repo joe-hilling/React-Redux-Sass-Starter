@@ -17,11 +17,6 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: "eslint-loader",
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
         loaders: "babel-loader",
         options: {
           presets: ["react", "stage-0", "es2015"],
@@ -30,15 +25,12 @@ module.exports = {
       }
     ]
   },
+  devtool: 'eval-source-map',
   devServer: {
     contentBase: "./public/",
     watchContentBase: true
   },
   plugins: [
-    new ExtractTextPlugin("bundle.css"),
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    }),
-    new webpack.optimize.UglifyJsPlugin()
+    new ExtractTextPlugin("bundle.css")
   ]
 };

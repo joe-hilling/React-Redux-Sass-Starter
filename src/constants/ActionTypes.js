@@ -9,4 +9,5 @@ export const INCREMENT_NUM = "INCREMENT_NUM";
 export const DECREMENT_NUM = "DECREMENT_NUM";
 export const RESET = "RESET";
 
+export const UPDATE_TEXT = "UPDATE_TEXT"
 /* eslint-enable */

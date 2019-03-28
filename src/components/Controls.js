@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
  class Controls extends Component {
@@ -9,15 +8,15 @@ import PropTypes from "prop-types";
 
     return (
       <div className="controls">
-        <div onClick={() => {increment();}}>
+        <button onClick={() => {increment();}}>
           <span>{incrementLabel}</span>
-        </div>
-        <div onClick={() => {resetCount(0);}}>
+        </button>
+        <button onClick={() => {resetCount(0);}}>
           <span>{resetLabel}</span>
-        </div>
-        <div onClick={() => {decrement();}}>
+        </button>
+        <button onClick={() => {decrement();}}>
           <span>{decrementLabel}</span>
-        </div>
+        </button>
       </div>
     );
   }
